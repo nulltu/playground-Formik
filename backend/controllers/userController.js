@@ -5,6 +5,7 @@ const jsonwebtoken = require('jsonwebtoken')
 const userController = {
 
     //Create new user.
+    //no olvidar agregar los otros datos de el modelo
     createUser: async (req, res) => {
         console.log(req.body)
         const { email, username, password } = req.body
