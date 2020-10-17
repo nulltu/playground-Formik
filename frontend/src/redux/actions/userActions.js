@@ -18,6 +18,14 @@ const userActions = {
                 }
             })
         }
+    },
+
+    logoutUser: () => {
+        return (dispatch, getState) => {
+            dispatch({
+                type: 'LOGOUT_APP'
+            })
+        }
     }
 }
 

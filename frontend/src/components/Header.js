@@ -1,12 +1,14 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 import '../styles/header.css'
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PersonIcon from '@material-ui/icons/Person';
+import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import { connect } from 'react-redux'
 
 const Header = (props) => {
 
+    console.log(props)
     return (
         <>
             <header>
@@ -24,11 +26,11 @@ const Header = (props) => {
                                 <NavLink to="/createAccount">Create Account</NavLink>
                             </div>
                             : <div className="container__preHeader">
-                                <PersonIcon style={{ color: '#f5f5f5' }} />
-                                <NavLink to="/createAccount">{props.username}</NavLink>
+                                <NavLink to="/profile">{props.username}</NavLink>
+                                <NavLink to="logout">
+                                <PowerSettingsNewIcon style={{ color: '#f5f5f5', margin:'-.5rem 0rem'}}/>
+                                </NavLink>
                             </div>}
-
-
                     </div>
                     <div className="container__navLinks">
                         <div>
@@ -57,4 +59,4 @@ const mapStateToProps = state => {
 }
 
 //conecto el Header a redux para poder traer el estado de login.
-export default connect(mapStateToProps)(Header) 
+export default connect(mapStateToProps)(Header)

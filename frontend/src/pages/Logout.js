@@ -1,10 +1,22 @@
-import React, { useState, useEffect } from 'react'
+ 
+import { connect } from 'react-redux'
+import userActions from '../redux/actions/userActions'
+import { useEffect } from 'react'
 
-const Logout = () => {
-    return(
-        <>
-        </>
-    )
+
+const Logout = (props) => {
+
+    console.log(props.logoutUser)
+    useEffect(() => {
+        props.logoutUser()
+        props.history.push('/')
+    },[])
+
+    return(null)
 }
 
-export default Logout
+const maspDispatchToProps = {
+    logoutUser : userActions.logoutUser
+}
+
+export default connect(null, maspDispatchToProps)(Logout)
