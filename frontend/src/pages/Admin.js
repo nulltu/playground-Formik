@@ -2,13 +2,13 @@ import React from 'react'
 import Header from '../components/Header'
 import FormAddProduct from '../components/FormAddProduct'
 
-const Products = () => {
+const Admin = () =>{
     return(
         <>
         <Header />
-       <h1>Aqui habra productos</h1>
+        <FormAddProduct />
         </>
     )
 }
 
-export default Products
+export default Admin

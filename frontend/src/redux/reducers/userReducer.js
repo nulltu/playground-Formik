@@ -1,6 +1,7 @@
 const initialState = {
     username : "",
-    token: ""   
+    token: "",   
+    role: ""
 }
 
 const userReducer = (state = initialState, action) =>{
@@ -9,7 +10,8 @@ const userReducer = (state = initialState, action) =>{
             return{
                 ...state,
                 username: action.payload.username,
-                token: action.payload.token
+                token: action.payload.token,
+                role: action.payload.role
             }
         case 'LOGOUT_APP':
             return{

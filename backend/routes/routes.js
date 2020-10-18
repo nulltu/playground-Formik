@@ -7,6 +7,9 @@ router.route('/users')
 .post(userController.createUser) //Create new user
 .get(userController.allUsers) //List of all users
 
+router.route('/login')
+.post(userController.login)
+
 router.route('/products')
 .post(productController.addProduct)//agregar producto a la db
 

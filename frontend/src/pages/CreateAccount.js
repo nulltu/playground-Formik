@@ -3,6 +3,7 @@ import '../styles/createAccount.css'
 import userActions from '../redux/actions/userActions'
 import {connect} from 'react-redux'
 import Header from '../components/Header'
+import { NavLink } from 'react-router-dom'
 
 const CreateAccount = (props) => {
 
@@ -34,6 +35,7 @@ const CreateAccount = (props) => {
                 <input type="username" name="username" id="username" placeholder="Enter your username" onChange={readInput}/>
                 <input type="password" name="password" id="password" placeholder="Enter your password" onChange={readInput}/>
                 <button type="submit" onClick={sendData}>Submit</button>
+                <span>Do you already have an account?</span><NavLink to="/login">Login</NavLink>
             </form>
         </>
     )
@@ -44,7 +46,6 @@ const mapDispatchToProps = {
     createAccount : userActions.createAccount
     
 }
-
 
 export default connect(null, mapDispatchToProps) (CreateAccount)
 
