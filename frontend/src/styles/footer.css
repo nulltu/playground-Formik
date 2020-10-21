@@ -4,7 +4,8 @@ footer{
 
 footer .container__super__footer{
     display: flex;
-    justify-content: center
+    justify-content: space-around;
+    align-items: center;
 }
 
 footer .container__super__footer .container__links{
@@ -26,10 +27,27 @@ footer .container__super__footer .container__links div a{
     font-size: .8rem;
 }
 
+.container__newsletter{
+    margin-top: 3.5rem;
+}
+.container__icon__up{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon__up{
+    color: black;
+    cursor: pointer;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
 .copyright p{
     color: whitesmoke;
     text-align:center;
     padding-bottom: 1rem;
+    font-size: .5rem;
 }
 
 #separation__footer{
