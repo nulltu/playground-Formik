@@ -4,6 +4,7 @@ import userActions from '../redux/actions/userActions'
 import {connect} from 'react-redux'
 import Header from '../components/Header'
 import { NavLink } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const CreateAccount = (props) => {
 
@@ -37,6 +38,7 @@ const CreateAccount = (props) => {
                 <button type="submit" onClick={sendData}>Submit</button>
                 <span>Do you already have an account?</span><NavLink to="/login">Login</NavLink>
             </form>
+            <Footer></Footer>
         </>
     )
 }
